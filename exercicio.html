@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios - Flex Fit Life</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0fff0; /* Verde muito claro */
+            color: #006400; /* Verde escuro */
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #228b22; /* Verde florestal */
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            background-color: #ffffff; /* Branco */
+            color: #006400; /* Verde escuro */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .tab:hover {
+            background-color: #228b22; /* Verde florestal */
+            color: #ffffff; /* Branco */
+        }
+
+        .exercise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .exercise-card {
+            background-color: #ffffff; /* Branco */
+            color: #006400; /* Verde escuro */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .exercise-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .exercise-card h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #228b22; /* Verde florestal */
+        }
+
+        .exercise-card p {
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .exercise-card button {
+            background-color: #228b22; /* Verde florestal */
+            color: #ffffff; /* Branco */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .exercise-card button:hover {
+            background-color: #006400; /* Verde escuro */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Exercícios</h1>
+        <p>Escolha o clima e o exercício para ver os detalhes e vídeos explicativos.</p>
+
+        <!-- Abas de Clima -->
+        <div class="tabs">
+            <div class="tab" onclick="showExercises('ensolarado')">Ensolarado</div>
+            <div class="tab" onclick="showExercises('chuvoso')">Chuvoso</div>
+            <div class="tab" onclick="showExercises('frio')">Frio</div>
+        </div>
+
+        <!-- Exercícios -->
+        <div class="exercise-grid" id="exercicio-ensolarado" style="display:block;">
+            <div class="exercise-card">
+                <img src="exercicio1.jpg" alt="Exercício 1">
+                <h3>Corrida ao Ar Livre</h3>
+                <p>Exercício excelente para o dia ensolarado.</p>
+                <button onclick="window.location.href='detalhes_exercicio1.html'">Ver Detalhes</button>
+            </div>
+            <div class="exercise-card">
+                <img src="exercicio2.jpg" alt="Exercício 2">
+                <h3>Caminhada no Parque</h3>
+                <p>Ideal para aproveitar o dia bonito.</p>
+                <button onclick="window.location.href='detalhes_exercicio2.html'">Ver Detalhes</button>
+            </div>
+        </div>
+
+        <div class="exercise-grid" id="exercicio-chuvoso" style="display:none;">
+            <div class="exercise-card">
+                <img src="exercicio3.jpg" alt="Exercício 3">
+                <h3>Exercícios no Aparelho</h3>
+                <p>Ideal para dias chuvosos, dentro de casa.</p>
+                <button onclick="window.location.href='detalhes_exercicio3.html'">Ver Detalhes</button>
+            </div>
+            <div class="exercise-card">
+                <img src="exercicio4.jpg" alt="Exercício 4">
+                <h3>Yoga</h3>
+                <p>Exercício perfeito para um dia chuvoso.</p>
+                <button onclick="window.location.href='detalhes_exercicio4.html'">Ver Detalhes</button>
+            </div>
+        </div>
+
+        <div class="exercise-grid" id="exercicio-frio" style="display:none;">
+            <div class="exercise-card">
+                <img src="exercicio5.jpg" alt="Exercício 5">
+                <h3>Alongamento</h3>
+                <p>Exercício recomendado para dias frios.</p>
+                <button onclick="window.location.href='detalhes_exercicio5.html'">Ver Detalhes</button>
+            </div>
+            <div class="exercise-card">
+                <img src="exercicio6.jpg" alt="Exercício 6">
+                <h3>Pular Corda</h3>
+                <p>Exercício intenso para aquecer o corpo no frio.</p>
+                <button onclick="window.location.href='detalhes_exercicio6.html'">Ver Detalhes</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showExercises(climate) {
+            // Esconde todas as listas de exercícios
+            document.getElementById('exercicio-ensolarado').style.display = 'none';
+            document.getElementById('exercicio-chuvoso').style.display = 'none';
+            document.getElementById('exercicio-frio').style.display = 'none';
+
+            // Exibe a lista de exercícios com base no clima
+            document.getElementById('exercicio-' + climate).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+

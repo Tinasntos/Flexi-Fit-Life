@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quem Somos - Flex Fit Life</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #7f00ff, #e100ff);
+            color: #fff;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .member {
+            background: #fff;
+            color: #000;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 250px;
+            text-align: center;
+        }
+        .member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .member h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .member p {
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        .member button {
+            background-color: #7f00ff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .member button:hover {
+            background-color: #e100ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Nossa Equipe</h1>
+        <p>
+            Somos uma equipe dedicada a ajudar você a alcançar seus objetivos de saúde e bem-estar.
+            Nosso compromisso é oferecer as melhores orientações e suporte... bla bla bla falem mais
+        </p>
+        <div class="team">
+            <!-- Membro 1 -->
+            <div class="member">
+                <img src="tina.jpg" alt="Integrante 1">
+                <h3>Tina Santos</h3>
+                <p>Desenvolvedora Back-end HTML.</p>
+                <button onclick="window.open('https://wa.me/5599457134?text=Ol%C3%A1%2C%20vim%20do%20site%20Flex%20Fit%20Life%20e%20gostaria%20de%20saber%20mais%20sobre%20desenvolvimento%20de%20HTML.')">Entrar em Contato</button>
+            </div>
+            <!-- Membro 2 -->
+            <div class="member">
+                <img src="integrante2.jpg" alt="Integrante 2">
+                <h3>Pedro Metzdorf</h3>
+                <p>Desenvolvedor Back-end do CSS.</p>
+                <button onclick="window.open('https://wa.me/5597073690?text=Ol%C3%A1%2C%20vim%20do%20site%20Flex%20Fit%20Life%20e%20gostaria%20de%20saber%20mais%20sobre%20desenvolvimento%20de%20CSS.')">Entrar em Contato</button>
+            </div>
+            <!-- Membro 3 -->
+            <div class="member">
+                <img src="integrante3.jpg" alt="Integrante 3">
+                <h3>Giovana Nunes</h3>
+                <p>Análista de dados.</p>
+                <button onclick="window.open('https://wa.me/5599375224?text=Ol%C3%A1%2C%20vim%20do%20site%20Flex%20Fit%20Life%20e%20gostaria%20de%20saber%20mais%20sobre%20an%C3%A1lise%20de%20dados.')">Entrar em Contato</button>
+            </div>
+            <!-- Membro 4 -->
+            <div class="member">
+                <img src="integrante4.jpg" alt="Integrante 4">
+                <h3>Ana Luiza</h3>
+                <p>Desenvolvedora do Banco de dados (mysql)</p>
+                <button onclick="window.open('https://wa.me/5597121816?text=Ol%C3%A1%2C%20vim%20do%20site%20Flex%20Fit%20Life%20e%20gostaria%20de%20saber%20mais%20sobre%20desenvolvimento%20de%20banco%20de%20dados.')">Entrar em Contato</button>
+            </div>
+            <!-- Membro 5 -->
+            <div class="member">
+                <img src="integrante5.jpg" alt="Integrante 5">
+                <h3>Édlin </h3>
+                <p>Analista de Dados.</p>
+                <button onclick="window.open('https://wa.me/5599045631?text=Ol%C3%A1%2C%20vim%20do%20site%20Flex%20Fit%20Life%20e%20gostaria%20de%20saber%20mais%20sobre%20an%C3%A1lise%20de%20dados.')">Entrar em Contato</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

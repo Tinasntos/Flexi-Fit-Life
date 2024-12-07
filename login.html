@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Flex Fit Life</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #006400; 
+            font-family: 'Arial', sans-serif;
+            color: #14a114; 
+            margin: 0;
+        }
+        .form-container {
+            background-color: #ffffff; 
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+            color: #006400; 
+            animation: fadeIn 1.5s;
+        }
+        .form-container h2 {
+            color: #228b22; 
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #006400; 
+        }
+        input {
+            padding: 10px;
+            border: 1px solid #006400; 
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #006400; 
+            color: #ffffff; 
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #228b22; 
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Login</h2>
+        <form action="verificar_login.php" method="post">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            
+            <label for="senha">Senha</label>
+            <input type="password" id="senha" name="senha" placeholder="Senha" required>
+            
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
